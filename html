@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Money Treehouse - Financial Literacy</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   colors: {
+                       'seafoam': '#A8E6CF',
+                       'buttercream': '#FDF4D1',
+                       'soft-sky': '#A8DFF2',
+                       'peach-sorbet': '#FFD8B1',
+                       'warm-ivory': '#FBF6F0',
+                       'text-dark': '#333333',
+                       'logo-green': '#174634',
+                   },
+                   fontFamily: {
+                       'sans': ['Fredoka', 'sans-serif'],
+                       'serif': ['Georgia', 'serif'],
+                   }
+               }
+           }
+       }
+   </script>
+</head>
+<body class="bg-warm-ivory text-text-dark font-sans flex flex-col min-h-screen">
+
+   <!-- Privacy Policy Modal -->
+   <div id="privacy-modal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-40 overflow-y-auto h-full w-full flex items-center justify-center backdrop-blur-sm transition-opacity">
+       <div class="relative mx-auto p-6 md:p-8 border w-full max-w-2xl shadow-2xl rounded-3xl bg-white m-4 max-h-[90vh] overflow-y-auto">
+           <button onclick="closePrivacyModal()" class="absolute top-5 right-5 text-gray-400 hover:text-logo-green transition-colors">
+               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+           </button>
+           <div class="mt-2">
+               <h3 class="text-3xl font-serif font-bold text-logo-green mb-2">Privacy Policy</h3>
+               <p class="text-sm text-gray-500 mb-6 font-medium">Last Updated: June 23, 2026</p>
+               <div class="text-gray-600 text-sm md:text-base space-y-5 leading-relaxed">
+                   <p>Welcome to The Money Treehouse. We respect your privacy and are committed to protecting your personal data.</p>
+               </div>
+               <div class="mt-8 pt-4 border-t border-gray-100 flex justify-end">
+                   <button onclick="closePrivacyModal()" class="px-6 py-2.5 bg-seafoam text-logo-green text-base font-bold rounded-full shadow-sm hover:brightness-95 transition duration-300">Acknowledge & Close</button>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- Navigation Bar -->
+   <nav class="bg-white shadow-md sticky top-0 z-50">
+       <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22120%22><g stroke=%22%23174634%22 stroke-width=%222%22 fill=%22none%22 transform=%22scale(0.5)%22><path d=%22M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z%22 /><path d=%22M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z%22 /><rect x=%2275%22 y=%2285%22 width=%2250%22 height=%2245%22 /><polygon points=%2265,85 100,50 135,85%22 /><path d=%22M 90 130 L 90 105 A 10 10 0 0 1 110 105 L 110 130%22 /></g></svg>');"></div>
+      
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+           <div class="flex flex-wrap justify-between min-h-[6rem] py-3 items-center gap-y-4">
+               <!-- Logo -->
+               <div class="flex-shrink-0 flex items-center bg-white/90 p-2 rounded-xl">
+                   <a href="#home" class="flex items-center">
+                       <svg class="h-[76px] w-auto" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z" fill="#A8E6CF" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                            <path d="M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                            <rect x="75" y="85" width="50" height="45" fill="#FBF6F0" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                            <text x="100" y="118" font-family="Arial" font-weight="bold" font-size="34" fill="#174634" text-anchor="middle">$</text>
+                            <polygon points="65,85 100,50 135,85" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                       </svg>
+                       <div class="font-serif text-logo-green text-[22px] leading-tight ml-3 flex flex-col justify-center">
+                            <span>The Money</span><span>Treehouse</span>
+                       </div>
+                   </a>
+               </div>
+
+               <!-- Menu Items -->
+               <div class="hidden md:flex flex-wrap items-center justify-end gap-3 lg:gap-5 w-full md:w-auto">
+                   <a href="#debt-literacy" class="bg-buttercream text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Debt Literacy</a>
+                   <a href="#budgeting" class="bg-seafoam text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Budgeting</a>
+                   <a href="#saving-investing" class="bg-soft-sky text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Saving & Investing</a>
+                   <a href="#wealth-preservation" class="bg-peach-sorbet text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Wealth Preservation</a>
+                  
+                   <div class="relative group">
+                       <button class="bg-white text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20 inline-flex items-center">
+                            <span>Resources</span>
+                            <svg class="ml-1.5 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                       </button>
+                       <div class="absolute hidden group-hover:block right-0 top-full pt-2 w-48 z-50">
+                            <div class="rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden border border-logo-green/10">
+                                 <div class="py-1">
+                                      <a href="#budget-template" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200">Budget Template</a>
+                                      <a href="#works-cited" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200 border-t border-gray-50">Works Cited</a>
+                                 </div>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </nav>
+
+   <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8">
+       <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-sm border border-logo-green/10 p-8 md:p-12 text-center" id="budget-template-section">
+           <h1 class="text-4xl font-serif font-bold text-logo-green mb-6">Budget Template</h1>
+           <p class="text-gray-600 mb-8 text-lg">
+               Click the button below to generate your own private Google Sheet budget template. It will be saved directly to your Google Drive!
+           </p>
+           
+           <button id="budgetBtn" class="bg-seafoam text-logo-green px-8 py-4 rounded-full font-bold text-lg shadow-sm hover:brightness-95 transition duration-300">
+               Get My Budget Template
+           </button>
+           
+           <div id="result" class="mt-6 text-xl font-medium"></div>
+       </div>
+   </main>
+
+   <footer class="bg-white border-t border-gray-200 mt-auto py-8 text-center relative overflow-hidden">
+       <div class="absolute inset-0 z-0 opacity-5" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22120%22><g stroke=%22%23174634%22 stroke-width=%222%22 fill=%22none%22 transform=%22scale(0.5)%22><path d=%22M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z%22 /><path d=%22M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z%22 /><rect x=%2275%22 y=%2285%22 width=%2250%22 height=%2245%22 /><polygon points=%2265,85 100,50 135,85%22 /><path d=%22M 90 130 L 90 105 A 10 10 0 0 1 110 105 L 110 130%22 /></g></svg>');"></div>
+      
+       <div class="relative z-10 flex flex-col items-center">
+           <svg class="h-12 w-auto mb-4 opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+               <path d="M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z" stroke="#174634" stroke-width="8" fill="none"/>
+               <path d="M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z" stroke="#174634" stroke-width="8" fill="none"/>
+               <rect x="75" y="85" width="50" height="45" stroke="#174634" stroke-width="8" fill="none"/>
+               <polygon points="65,85 100,50 135,85" stroke="#174634" stroke-width="8" fill="none"/>
+           </svg>
+           <p class="text-sm text-gray-500">&copy; 2026 The Money Treehouse. All rights reserved.</p>
+           <button onclick="openPrivacyModal()" class="text-sm text-gray-500 hover:text-logo-green hover:underline">Privacy Policy</button>
+       </div>
+   </footer>
+
+   <script>
+       function openPrivacyModal() { document.getElementById('privacy-modal').classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+       function closePrivacyModal() { document.getElementById('privacy-modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
+
+       document.getElementById('budgetBtn').addEventListener('click', function() {
+           const resultDiv = document.getElementById('result');
+           resultDiv.innerHTML = '<span class="text-gray-500">Generating your template...</span>';
+           
+           const scriptUrl = 'https://script.google.com/macros/s/AKfycbyJgaeNXnl6YvNm7bL9qWujKkF0XlprwKsghpdLdWlmh7gUGLaYobotaRAR3kF9114crA/exec';
+           
+           // Call the script
+           fetch(scriptUrl + '?method=createPersonalCopy')
+           .then(response => response.text())
+           .then(url => {
+               resultDiv.innerHTML = '<a href="' + url + '" target="_blank" class="text-logo-green underline hover:text-green-800 transition-colors">Click here to open your new budget!</a>';
+           })
+           .catch(error => {
+               resultDiv.innerHTML = '<span class="text-red-500">Oops! Something went wrong. Please try again.</span>';
+           });
+       });
+   </script>
+</body>
+</html>
