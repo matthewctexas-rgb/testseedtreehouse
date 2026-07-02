@@ -30,6 +30,7 @@
 </head>
 <body class="bg-warm-ivory text-text-dark font-sans flex flex-col min-h-screen">
 
+
    <!-- Privacy Policy Modal -->
    <div id="privacy-modal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-40 overflow-y-auto h-full w-full flex items-center justify-center backdrop-blur-sm transition-opacity">
        <div class="relative mx-auto p-6 md:p-8 border w-full max-w-2xl shadow-2xl rounded-3xl bg-white m-4 max-h-[90vh] overflow-y-auto">
@@ -49,8 +50,10 @@
        </div>
    </div>
 
+
    <!-- Navigation Bar -->
    <nav class="bg-white shadow-md sticky top-0 z-50">
+       <!-- Full-Toolbar Pattern -->
        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22120%22><g stroke=%22%23174634%22 stroke-width=%222%22 fill=%22none%22 transform=%22scale(0.5)%22><path d=%22M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z%22 /><path d=%22M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z%22 /><rect x=%2275%22 y=%2285%22 width=%2250%22 height=%2245%22 /><polygon points=%2265,85 100,50 135,85%22 /><path d=%22M 90 130 L 90 105 A 10 10 0 0 1 110 105 L 110 130%22 /></g></svg>');"></div>
       
        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -59,65 +62,221 @@
                <div class="flex-shrink-0 flex items-center bg-white/90 p-2 rounded-xl">
                    <a href="#home" class="flex items-center">
                        <svg class="h-[76px] w-auto" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z" fill="#A8E6CF" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
-                            <path d="M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
-                            <rect x="75" y="85" width="50" height="45" fill="#FBF6F0" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
-                            <text x="100" y="118" font-family="Arial" font-weight="bold" font-size="34" fill="#174634" text-anchor="middle">$</text>
-                            <polygon points="65,85 100,50 135,85" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                           <path d="M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z" fill="#A8E6CF" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                           <path d="M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                           <rect x="75" y="85" width="50" height="45" fill="#FBF6F0" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+                           <text x="100" y="118" font-family="Arial" font-weight="bold" font-size="34" fill="#174634" text-anchor="middle">$</text>
+                           <polygon points="65,85 100,50 135,85" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
                        </svg>
                        <div class="font-serif text-logo-green text-[22px] leading-tight ml-3 flex flex-col justify-center">
-                            <span>The Money</span><span>Treehouse</span>
+                           <span>The Money</span><span>Treehouse</span>
                        </div>
                    </a>
                </div>
 
+
                <!-- Menu Items -->
                <div class="hidden md:flex flex-wrap items-center justify-end gap-3 lg:gap-5 w-full md:w-auto">
+                   <!-- Swapped Colors: Debt Literacy now Buttercream, Budgeting now Seafoam -->
                    <a href="#debt-literacy" class="bg-buttercream text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Debt Literacy</a>
                    <a href="#budgeting" class="bg-seafoam text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Budgeting</a>
                    <a href="#saving-investing" class="bg-soft-sky text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Saving & Investing</a>
                    <a href="#wealth-preservation" class="bg-peach-sorbet text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20">Wealth Preservation</a>
                   
+                   <!-- Resources Dropdown -->
                    <div class="relative group">
                        <button class="bg-white text-logo-green px-4 py-2 rounded-full font-bold shadow-sm border border-logo-green/20 inline-flex items-center">
-                            <span>Resources</span>
-                            <svg class="ml-1.5 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
+                           <span>Resources</span>
+                           <svg class="ml-1.5 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                           </svg>
                        </button>
                        <div class="absolute hidden group-hover:block right-0 top-full pt-2 w-48 z-50">
-                            <div class="rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden border border-logo-green/10">
-                                 <div class="py-1">
-                                      <a href="#budget-template" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200">Budget Template</a>
-                                      <a href="#works-cited" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200 border-t border-gray-50">Works Cited</a>
-                                 </div>
-                            </div>
+                           <div class="rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden border border-logo-green/10">
+                               <div class="py-1">
+                                    <a href="#interest-calculator" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200 border-t border-gray-50">Interest Calculator</a>
+                                   <a href="#budget-template" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200">Budget Template</a>
+                                   <a href="#works-cited" class="block px-4 py-3 text-[14px] font-bold text-logo-green hover:bg-seafoam transition-colors duration-200 border-t border-gray-50">Works Cited</a>
+                               </div>
+                           </div>
                        </div>
                    </div>
+
+
                </div>
            </div>
        </div>
    </nav>
 
-   <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8">
-       <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-sm border border-logo-green/10 p-8 md:p-12 text-center" id="budget-template-section">
-           <h1 class="text-4xl font-serif font-bold text-logo-green mb-6">Budget Template</h1>
-           <p class="text-gray-600 mb-8 text-lg">
-               Click the button below to generate your own private Google Sheet budget template. It will be saved directly to your Google Drive!
-           </p>
+
+   <main class="flex-grow">
+       <!-- Debt Literacy Banner -->
+       <div class="bg-buttercream border-b border-logo-green/10 py-12 md:py-16 relative overflow-hidden">
+           <!-- Subtle pattern matching the nav/footer -->
+           <div class="absolute inset-0 z-0 opacity-5" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22120%22><g stroke=%22%23174634%22 stroke-width=%222%22 fill=%22none%22 transform=%22scale(0.5)%22><path d=%22M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z%22 /><path d=%22M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z%22 /><rect x=%2275%22 y=%2285%22 width=%2250%22 height=%2245%22 /><polygon points=%2265,85 100,50 135,85%22 /><path d=%22M 90 130 L 90 105 A 10 10 0 0 1 110 105 L 110 130%22 /></g></svg>');"></div>
            
-           <button id="budgetBtn" class="bg-seafoam text-logo-green px-8 py-4 rounded-full font-bold text-lg shadow-sm hover:brightness-95 transition duration-300">
-               Get My Budget Template
-           </button>
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+               <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-logo-green">Debt Literacy</h1>
+           </div>
+       </div>
+
+       <!-- Introduction Text -->
+       <section id="debt-literacy-intro" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+           <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 relative">
+               <p class="text-lg md:text-xl text-text-dark leading-relaxed font-medium text-center">
+                   Debt can certainly build up very quickly and overwhelm you if you aren’t careful. In this section, we will explore how to manage existing debt and how to choose and pay future debt to potentially save thousands.
+               </p>
+           </div>
+       </section>
+
+       <!-- Tab Navigation Buttons -->
+       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 flex flex-col md:flex-row justify-center gap-4">
+           <button onclick="showTab('tab-interest')" id="btn-interest" class="tab-btn px-6 py-3 rounded-full font-bold shadow-sm transition-all duration-300 bg-logo-green text-white border-2 border-logo-green scale-105">How Debt Works: Simple and Compound Interest</button>
+           <button onclick="showTab('tab-manage')" id="btn-manage" class="tab-btn px-6 py-3 rounded-full font-bold shadow-sm transition-all duration-300 bg-white text-logo-green border-2 border-logo-green/20 hover:border-logo-green/60 hover:bg-seafoam/20">Managing Current Debt</button>
+           <button onclick="showTab('tab-future')" id="btn-future" class="tab-btn px-6 py-3 rounded-full font-bold shadow-sm transition-all duration-300 bg-white text-logo-green border-2 border-logo-green/20 hover:border-logo-green/60 hover:bg-seafoam/20">Dealing with Future Debt</button>
+       </div>
+
+       <!-- Tab Content Sections (Blank Paragraphs) -->
+       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
            
-           <div id="result" class="mt-6 text-xl font-medium"></div>
+           <!-- Tab 1: How Debt Works -->
+           <div id="tab-interest" class="tab-content block animate-[fadeIn_0.5s_ease-out]">
+               <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 min-h-[200px]">
+                   <h2 class="text-2xl font-serif font-bold text-logo-green mb-6 border-b border-gray-100 pb-4">How Debt Works: Simple and Compound Interest</h2>
+                   <!-- Body paragraph -->
+                   <div class="text-text-dark leading-relaxed space-y-4">
+                       <p>To understand debt, first you have to understand how debt works, and how it can build up so quickly. Simply put, debt is money that you owe to another person or entity. For example, if you borrow $20 from your friend, you are now in debt to him/her for $20. Common types of debt include student loans, mortgages/car loans, and credit card debt.</p>
+
+                       <p>Many types of debt charge <strong>interest</strong>, which is additional money that you owe for taking out the loan on top of your original amount. The original amount that you take out is called the <strong>principal</strong>, and the interest rate is called the <strong>annual percentage rate</strong>, or just <strong>APR</strong>.</p>
+
+                       <div class="bg-gray-50 p-5 md:p-6 rounded-2xl border border-gray-100 my-6">
+                           <p class="mb-3">For example, say you have a loan with principal <strong>$1,000</strong> with an annual percentage rate of <strong>10%</strong>.</p>
+                           <p>After one year, you will owe the original $1,000, and with an interest of $1000 * 10% = $100 extra, totalling to <strong>$1,100</strong>. That’s $100 extra that you owe just from interest alone. And the more debt you owe, and the higher the APR, the more you will owe. Say you hold the debt for four more years, and take on $100 more in debt per year, making a debt of <strong>$1,500</strong>.</p>
+                       </div>
+
+                       <p>However, it can get even worse. The previous scenario was an example of <strong>simple interest</strong>, where interest is only based on the original principal. Therefore, every year that you don’t pay back the debt, you will owe another $100 in interest. That’s a lot, but it could get worse with compound interest.</p>
+
+                       <p><strong>Compound interest</strong> is interest charged on the principal, but <em>also on any interest that you owe</em>. An example will help clarify, so let us relate back to the original example, with the principal debt of $1,000 and the APR of 10%, only this time it is compounded.</p>
+
+                       <div class="bg-seafoam/15 p-5 md:p-6 rounded-2xl border border-seafoam/40 my-6 space-y-3">
+                           <p><strong>Year 1:</strong> After the first year, you will still owe the original $1,000 plus the interest of $1,000 * 10% = $100, for a total of <strong>$1,100</strong>.</p>
+                           <p><strong>Year 2:</strong> However, this is where compound interest differs. For the second year, instead of owing another $100 in interest, you owe $1,100 * 10% = $110, for a total debt of <strong>$1,210</strong>.</p>
+                           <p class="text-logo-green font-medium italic py-2">Did you see what happened? The 10% interest was charged not only on the principal of $1,000, but also on the $100 interest you accumulated last year!</p>
+                           <p><strong>Year 3:</strong> Following the pattern, the next year interest will be $1,210 * 10% = $121, making the total that you owe <strong>$1,331</strong>.</p>
+                           <p><strong>Year 4:</strong> For the fourth year, the interest will be $1,331 * 10% = $133.10, making the total <strong>$1,464.10</strong>.</p>
+                           <p><strong>Year 5:</strong> Finally for the fifth year, the interest will be $1,464.10 * 10% = $146.41, making the total <strong>$1,610.51</strong>.</p>
+                       </div>
+
+                       <p>Now, compare this total with the total for simple interest. Even with the same principal and APR, you owe an extra <strong>$110.51</strong>. Additionally, both were considerably higher than the original amount of $1,000.</p>
+
+                       <p>What if you took both loans and held it for <strong>25 years</strong>, instead of the original 5 in the example? For the simple interest loan, you would owe <strong>$3,500</strong> total. However, for the compound interest loan, you would owe a staggering <strong>$10,834.71!</strong> That’s 10 times the original loan!</p>
+
+                       <p>There are, of course, ways to calculate how much money you would owe without mapping out every single year. Here are the mathematical formulas:</p>
+
+                       <div class="grid md:grid-cols-2 gap-6 my-6">
+                           <!-- Simple Interest Formula -->
+                           <div class="bg-gray-50 p-5 md:p-6 rounded-2xl border border-gray-100">
+                               <h3 class="text-xl font-serif font-bold text-logo-green mb-3">Simple Interest</h3>
+                               <div class="text-center py-4 bg-white rounded-xl border border-gray-200 mb-4 shadow-sm">
+                                   <span class="text-2xl font-serif font-bold tracking-wide text-text-dark">A = P(1 + rt)</span>
+                               </div>
+                               <ul class="text-sm space-y-2">
+                                   <li><strong class="text-logo-green">A</strong> = Total Amount owed (Principal + Interest)</li>
+                                   <li><strong class="text-logo-green">P</strong> = Principal (original amount borrowed)</li>
+                                   <li><strong class="text-logo-green">r</strong> = Annual interest rate (as a decimal, e.g., 10% = 0.10)</li>
+                                   <li><strong class="text-logo-green">t</strong> = Time the money is borrowed for (in years)</li>
+                               </ul>
+                           </div>
+
+                           <!-- Compound Interest Formula -->
+                           <div class="bg-seafoam/15 p-5 md:p-6 rounded-2xl border border-seafoam/40">
+                               <h3 class="text-xl font-serif font-bold text-logo-green mb-3">Compound Interest</h3>
+                               <div class="text-center py-4 bg-white rounded-xl border border-seafoam/40 mb-4 shadow-sm">
+                                   <span class="text-2xl font-serif font-bold tracking-wide text-text-dark">A = P(1 + r/n)<sup>nt</sup></span>
+                               </div>
+                               <ul class="text-sm space-y-2">
+                                   <li><strong class="text-logo-green">A</strong> = Total Amount owed (Principal + Interest)</li>
+                                   <li><strong class="text-logo-green">P</strong> = Principal (original amount borrowed)</li>
+                                   <li><strong class="text-logo-green">r</strong> = Annual interest rate (as a decimal)</li>
+                                   <li><strong class="text-logo-green">n</strong> = Number of times interest is compounded per year</li>
+                                   <li><strong class="text-logo-green">t</strong> = Time the money is borrowed for (in years)</li>
+                               </ul>
+                           </div>
+                       </div>
+
+                       <p class="mt-4 mb-8 text-lg">In the <strong>"Resources"</strong> tab at the top, there is an interest calculator. Feel free to play around with the numbers and see how the totals change. There are also graphs and charts to help you visualize the data.</p>
+
+                       <div class="bg-peach-sorbet/30 p-6 md:p-8 rounded-2xl border border-peach-sorbet/60">
+                           <h3 class="text-2xl font-serif font-bold text-logo-green mb-4">Key Takeaways</h3>
+                           <ul class="list-disc list-outside ml-6 space-y-3 text-text-dark font-medium leading-relaxed">
+                               <li>When taking out a loan, the original amount is called the <strong>principal</strong>, but you will also owe additional <strong>interest</strong>, determined by the principal and the <strong>annual percentage rate (APR)</strong>.</li>
+                               <li><strong>Simple interest</strong> charges interest on the principal alone, but <strong>compound interest</strong> charges on the principal plus any interest accumulated.</li>
+                               <li><strong>Compound interest can grow extremely quickly!</strong></li>
+                               <li>When taking out a loan, it is critical to check the principal, APR, and whether the loan is simple or compounded.</li>
+                           </ul>
+                       </div>
+
+                       <!-- Pagination / Next Button -->
+                       <div class="mt-10 pt-6 border-t border-gray-100 flex justify-end">
+                           <button onclick="goToTab('tab-manage')" class="inline-flex items-center gap-2 px-6 py-3 bg-logo-green text-white font-bold rounded-full shadow-sm hover:scale-105 transition-all duration-300">
+                               Next: Managing Current Debt
+                               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                           </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Tab 2: Managing Current Debt -->
+           <div id="tab-manage" class="tab-content hidden animate-[fadeIn_0.5s_ease-out]">
+               <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 min-h-[200px]">
+                   <h2 class="text-2xl font-serif font-bold text-logo-green mb-6 border-b border-gray-100 pb-4">Managing Current Debt</h2>
+                   <!-- Blank body paragraph -->
+                   <div class="text-text-dark leading-relaxed">
+                       
+                       <!-- Pagination Buttons -->
+                       <div class="mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between gap-4">
+                           <button onclick="goToTab('tab-interest')" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-logo-green border-2 border-logo-green/20 hover:border-logo-green/60 hover:bg-seafoam/20 font-bold rounded-full shadow-sm transition-all duration-300">
+                               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                               Previous: How Debt Works
+                           </button>
+                           <button onclick="goToTab('tab-future')" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-logo-green text-white font-bold rounded-full shadow-sm hover:scale-105 transition-all duration-300">
+                               Next: Dealing with Future Debt
+                               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                           </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Tab 3: Dealing with Future Debt -->
+           <div id="tab-future" class="tab-content hidden animate-[fadeIn_0.5s_ease-out]">
+               <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 min-h-[200px]">
+                   <h2 class="text-2xl font-serif font-bold text-logo-green mb-6 border-b border-gray-100 pb-4">Dealing with Future Debt</h2>
+                   <!-- Blank body paragraph -->
+                   <div class="text-text-dark leading-relaxed">
+                       
+                       <!-- Pagination Button -->
+                       <div class="mt-10 pt-6 border-t border-gray-100 flex justify-start">
+                           <button onclick="goToTab('tab-manage')" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-logo-green border-2 border-logo-green/20 hover:border-logo-green/60 hover:bg-seafoam/20 font-bold rounded-full shadow-sm transition-all duration-300">
+                               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                               Previous: Managing Current Debt
+                           </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
        </div>
    </main>
 
+
    <footer class="bg-white border-t border-gray-200 mt-auto py-8 text-center relative overflow-hidden">
+       <!-- Footer Pattern -->
        <div class="absolute inset-0 z-0 opacity-5" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22120%22><g stroke=%22%23174634%22 stroke-width=%222%22 fill=%22none%22 transform=%22scale(0.5)%22><path d=%22M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z%22 /><path d=%22M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z%22 /><rect x=%2275%22 y=%2285%22 width=%2250%22 height=%2245%22 /><polygon points=%2265,85 100,50 135,85%22 /><path d=%22M 90 130 L 90 105 A 10 10 0 0 1 110 105 L 110 130%22 /></g></svg>');"></div>
       
        <div class="relative z-10 flex flex-col items-center">
+           <!-- Monochrome Logo -->
            <svg class="h-12 w-auto mb-4 opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                <path d="M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z" stroke="#174634" stroke-width="8" fill="none"/>
                <path d="M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z" stroke="#174634" stroke-width="8" fill="none"/>
@@ -129,26 +288,75 @@
        </div>
    </footer>
 
+
+   <style>
+       @keyframes fadeIn {
+           from { opacity: 0; transform: translateY(5px); }
+           to { opacity: 1; transform: translateY(0); }
+       }
+   </style>
+
    <script>
        function openPrivacyModal() { document.getElementById('privacy-modal').classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
        function closePrivacyModal() { document.getElementById('privacy-modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
-
-       document.getElementById('budgetBtn').addEventListener('click', function() {
-           const resultDiv = document.getElementById('result');
-           resultDiv.innerHTML = '<span class="text-gray-500">Generating your template...</span>';
-           
-           const scriptUrl = 'https://script.google.com/macros/s/AKfycbyJgaeNXnl6YvNm7bL9qWujKkF0XlprwKsghpdLdWlmh7gUGLaYobotaRAR3kF9114crA/exec';
-           
-           // Call the script
-           fetch(scriptUrl + '?method=createPersonalCopy')
-           .then(response => response.text())
-           .then(url => {
-               resultDiv.innerHTML = '<a href="' + url + '" target="_blank" class="text-logo-green underline hover:text-green-800 transition-colors">Click here to open your new budget!</a>';
-           })
-           .catch(error => {
-               resultDiv.innerHTML = '<span class="text-red-500">Oops! Something went wrong. Please try again.</span>';
+       
+       // Tab switching logic
+       function showTab(tabId) {
+           // 1. Hide all content sections
+           const allTabs = document.querySelectorAll('.tab-content');
+           allTabs.forEach(tab => {
+               tab.classList.add('hidden');
+               tab.classList.remove('block');
            });
-       });
+
+           // 2. Show the targeted content section
+           const targetTab = document.getElementById(tabId);
+           if(targetTab) {
+               targetTab.classList.remove('hidden');
+               targetTab.classList.add('block');
+           }
+
+           // 3. Reset all buttons to inactive styling
+           const allBtns = document.querySelectorAll('.tab-btn');
+           allBtns.forEach(btn => {
+               // Remove active classes
+               btn.classList.remove('bg-logo-green', 'text-white', 'border-logo-green', 'scale-105');
+               // Add inactive classes
+               btn.classList.add('bg-white', 'text-logo-green', 'border-logo-green/20', 'hover:border-logo-green/60', 'hover:bg-seafoam/20');
+           });
+
+           // 4. Set the clicked button to active styling
+           const activeBtnId = tabId.replace('tab-', 'btn-');
+           const activeBtn = document.getElementById(activeBtnId);
+           if(activeBtn) {
+               // Remove inactive classes
+               activeBtn.classList.remove('bg-white', 'text-logo-green', 'border-logo-green/20', 'hover:border-logo-green/60', 'hover:bg-seafoam/20');
+               // Add active classes
+               activeBtn.classList.add('bg-logo-green', 'text-white', 'border-logo-green', 'scale-105');
+           }
+       }
+
+       // Function to switch tabs and scroll up smoothly
+       function goToTab(tabId) {
+           showTab(tabId);
+           // Smoothly scroll to the intro section so the new content is clearly in view
+           document.getElementById('debt-literacy-intro').scrollIntoView({ behavior: 'smooth' });
+       }
    </script>
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#" class="fixed bottom-6 right-6 z-[100] group flex items-center justify-center p-2 bg-white rounded-full shadow-lg opacity-50 hover:opacity-100 transition-all duration-300 border border-logo-green/20">
+        <!-- Tooltip -->
+        <span class="absolute right-full mr-3 whitespace-nowrap bg-logo-green text-white text-sm font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-md">
+            Back to top
+        </span>
+        <!-- Small Logo -->
+        <svg class="h-10 w-auto" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 50 130 C 10 130, 10 60, 55 65 C 55 10, 145 10, 145 65 C 190 60, 190 130, 150 130 Z" fill="#A8E6CF" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+            <path d="M 85 130 C 85 160, 75 180, 60 195 L 140 195 C 125 180, 115 160, 115 130 Z" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+            <rect x="75" y="85" width="50" height="45" fill="#FBF6F0" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+            <text x="100" y="118" font-family="Arial" font-weight="bold" font-size="34" fill="#174634" text-anchor="middle">$</text>
+            <polygon points="65,85 100,50 135,85" fill="#FFD8B1" stroke="#174634" stroke-width="4.5" stroke-linejoin="round"/>
+        </svg>
+    </a>
 </body>
 </html>
